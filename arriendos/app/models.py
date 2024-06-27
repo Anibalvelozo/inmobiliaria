@@ -52,7 +52,7 @@ class Inmueble(models.Model):
     usuario = models.ForeignKey(User, on_delete=models.CASCADE)
     tipo_inmueble = models.ForeignKey(Tipo_inmueble, on_delete=models.CASCADE)
     comuna = models.ForeignKey(Comuna, on_delete=models.CASCADE)
-    region=models.ForeignKey(Region, on_delete=models.CASCADE)
+    region = models.ForeignKey(Region, on_delete=models.CASCADE)
     nombre = models.CharField(max_length=200)
     m2_construido = models.FloatField()
     numero_bano = models.IntegerField(validators=[MinValueValidator(0)], default=0)
@@ -65,7 +65,7 @@ class Inmueble(models.Model):
 
 class Perfil(models.Model):
     usuario = models.OneToOneField(User, on_delete=models.CASCADE)
-    Tipo_usuario=models.ForeignKey('Tipo_usuario',on_delete=models.CASCADE)
+    tipo_usuario = models.ForeignKey('Tipo_usuario', on_delete=models.CASCADE)
     rut = models.CharField(max_length=12)
     direccion = models.CharField(max_length=200)
     telefono = models.CharField(max_length=15)
@@ -73,3 +73,4 @@ class Perfil(models.Model):
 
     def __str__(self):
         return self.usuario.username
+

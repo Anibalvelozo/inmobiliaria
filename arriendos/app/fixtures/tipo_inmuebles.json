@@ -3,7 +3,6 @@
         "model": "app.Tipo_inmueble",
         "pk": 1,
         "fields": {
-            "id": 1,
             "tipo": "Departamento"
         }
     },
@@ -11,7 +10,6 @@
         "model": "app.Tipo_inmueble",
         "pk": 2,
         "fields": {
-            "id": 2,
             "tipo": "Casa"
         }
     },
@@ -19,7 +17,6 @@
         "model": "app.Tipo_inmueble",
         "pk": 3,
         "fields": {
-            "id": 3,
             "tipo": "Parcela"
         }
     }

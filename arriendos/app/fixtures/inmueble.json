@@ -1,31 +1,138 @@
 [
     {
-        "model": "app.inmueble", 
-        "pk": 2, 
+        "model": "app.Inmueble",
+        "pk": 1,
         "fields": {
-            "id_usuario": 3, 
-            "id_tipo_inmueble": 2, 
-            "id_comuna": 5, 
-            "id_region": 1, 
-            "nombre_inmueble": "Departamento 1", 
-            "m2_construido": 100.0, 
-            "numero_banos": 1, 
-            "numero_hab": 2, 
-            "direccion": "pasaje el derby 4394"}
-            },
+            "usuario": 1,
+            "tipo_inmueble": 1,
+            "comuna": 1,
+            "region": 1,
+            "nombre": "Departamento Céntrico",
+            "m2_construido": 80.0,
+            "numero_bano": 2,
+            "numero_hab": 3,
+            "direccion": "Av. Principal 123"
+        }
+    },
     {
-        "model": "app.inmueble", 
-        "pk": 3, 
+        "model": "app.Inmueble",
+        "pk": 2,
         "fields": {
-            "id_usuario": 4, 
-            "id_tipo_inmueble": 1, 
-            "id_comuna": 6, 
-            "id_region": 2, 
-            "nombre_inmueble": "Departamento 1", 
-            "m2_construido": 100.0, 
-            "numero_banos": 1, 
-            "numero_hab": 2, 
-            "direccion": "AVENIDA SIEMPRE VIVA"}
-                    }            
-
+            "usuario": 2,
+            "tipo_inmueble": 1,
+            "comuna": 2,
+            "region": 2,
+            "nombre": "Apartamento Vista al Mar",
+            "m2_construido": 70.0,
+            "numero_bano": 1,
+            "numero_hab": 2,
+            "direccion": "Calle Costera 456"
+        }
+    },
+    {
+        "model": "app.Inmueble",
+        "pk": 3,
+        "fields": {
+            "usuario": 3,
+            "tipo_inmueble": 1,
+            "comuna": 3,
+            "region": 3,
+            "nombre": "Piso Moderno",
+            "m2_construido": 90.0,
+            "numero_bano": 2,
+            "numero_hab": 3,
+            "direccion": "Plaza Principal 789"
+        }
+    },
+    
+    {
+        "model": "app.Inmueble",
+        "pk": 11,
+        "fields": {
+            "usuario": 4,
+            "tipo_inmueble": 2,
+            "comuna": 4,
+            "region": 4,
+            "nombre": "Casa Familiar",
+            "m2_construido": 180.0,
+            "numero_bano": 3,
+            "numero_hab": 4,
+            "direccion": "Calle de las Rosas 101"
+        }
+    },
+    {
+        "model": "app.Inmueble",
+        "pk": 12,
+        "fields": {
+            "usuario": 5,
+            "tipo_inmueble": 2,
+            "comuna": 5,
+            "region": 5,
+            "nombre": "Chalet con Jardín",
+            "m2_construido": 150.0,
+            "numero_bano": 2,
+            "numero_hab": 3,
+            "direccion": "Avenida del Sol 202"
+        }
+    },
+    {
+        "model": "app.Inmueble",
+        "pk": 13,
+        "fields": {
+            "usuario": 6,
+            "tipo_inmueble": 2,
+            "comuna": 6,
+            "region": 6,
+            "nombre": "Casa Rural",
+            "m2_construido": 120.0,
+            "numero_bano": 2,
+            "numero_hab": 2,
+            "direccion": "Camino a la Montaña 303"
+        }
+    },
+    {
+        "model": "app.Inmueble",
+        "pk": 21,
+        "fields": {
+            "usuario": 7,
+            "tipo_inmueble": 3,
+            "comuna": 7,
+            "region": 7,
+            "nombre": "Terreno Agrícola",
+            "m2_construido": 0.0,
+            "numero_bano": 0,
+            "numero_hab": 0,
+            "direccion": "Ruta Campestre KM 10"
+        }
+    },
+    {
+        "model": "app.Inmueble",
+        "pk": 22,
+        "fields": {
+            "usuario": 8,
+            "tipo_inmueble": 3,
+            "comuna": 8,
+            "region": 8,
+            "nombre": "Parcela con Viñedo",
+            "m2_construido": 200.0,
+            "numero_bano": 1,
+            "numero_hab": 1,
+            "direccion": "Camino del Vino 123"
+        }
+    },
+    {
+        "model": "app.Inmueble",
+        "pk": 23,
+        "fields": {
+            "usuario": 9,
+            "tipo_inmueble": 3,
+            "comuna": 9,
+            "region": 9,
+            "nombre": "Campo de Descanso",
+            "m2_construido": 150.0,
+            "numero_bano": 0,
+            "numero_hab": 0,
+            "direccion": "Vereda Campestre 456"
+        }
+    }
 ]

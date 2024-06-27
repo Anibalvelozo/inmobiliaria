@@ -1,12 +1,72 @@
 [
     {
-        "model": "app.usuario", 
-        "pk": 1, 
-        "fields": {"id_usuario": 2}
-    }, 
+        "model": "app.usuario",
+        "pk": 1,
+        "fields": {
+            "user": 1
+        }
+    },
     {
-        "model": "app.usuario", 
-        "pk": 4, 
-        "fields": {"id_usuario": 3}
+        "model": "app.usuario",
+        "pk": 2,
+        "fields": {
+            "user": 2
+        }
+    },
+    {
+        "model": "app.usuario",
+        "pk": 3,
+        "fields": {
+            "user": 3
+        }
+    },
+    {
+        "model": "app.usuario",
+        "pk": 4,
+        "fields": {
+            "user": 4
+        }
+    },
+    {
+        "model": "app.usuario",
+        "pk": 5,
+        "fields": {
+            "user": 5
+        }
+    },
+    {
+        "model": "app.usuario",
+        "pk": 6,
+        "fields": {
+            "user": 6
+        }
+    },
+    {
+        "model": "app.usuario",
+        "pk": 7,
+        "fields": {
+            "user": 7
+        }
+    },
+    {
+        "model": "app.usuario",
+        "pk": 8,
+        "fields": {
+            "user": 8
+        }
+    },
+    {
+        "model": "app.usuario",
+        "pk": 9,
+        "fields": {
+            "user": 9
+        }
+    },
+    {
+        "model": "app.usuario",
+        "pk": 10,
+        "fields": {
+            "user": 10
+        }
     }
-    ]
+]

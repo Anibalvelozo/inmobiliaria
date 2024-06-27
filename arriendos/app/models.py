@@ -4,25 +4,26 @@ from django.core.validators import MinValueValidator
 
 
 class Usuario(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    # Relación OneToOne con el modelo User de Django
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='usuario')
 
     def __str__(self):
         return self.user.username
 
 
 class Region(models.Model):
-    nombre = models.CharField(max_length=100)
+    region = models.CharField(max_length=100)
 
     def __str__(self):
-        return self.nombre
+        return self.region
 
 
 class Comuna(models.Model):
-    nombre = models.CharField(max_length=100)
-    region = models.ForeignKey(Region, on_delete=models.CASCADE)
+    comuna = models.CharField(max_length=100)
+    region = models.ForeignKey(Region, on_delete=models.CASCADE, related_name='comunas', null=True, blank=True)
 
     def __str__(self):
-        return f"{self.nombre} ({self.region.nombre})"
+        return f"{self.comuna} ({self.region.region if self.region else 'Sin Región'})"
 
 
 class Tipo_inmueble(models.Model):
@@ -30,17 +31,6 @@ class Tipo_inmueble(models.Model):
         ('Departamento', 'Departamento'),
         ('Casa', 'Casa'),
         ('Parcela', 'Parcela'),
-    ]
-    tipo = models.CharField(max_length=20, choices=TIPO_CHOICES)
-
-    def __str__(self):
-        return self.tipo
-
-
-class Tipo_usuario(models.Model):
-    TIPO_CHOICES = [
-        ('Arrendador', 'Arrendador'),
-        ('Arrendatario', 'Arrendatario'),
     ]
     tipo = models.CharField(max_length=20, choices=TIPO_CHOICES)
 
@@ -63,9 +53,20 @@ class Inmueble(models.Model):
         return self.nombre
 
 
+class Tipo_usuario(models.Model):
+    TIPO_CHOICES = [
+        ('Arrendador', 'Arrendador'),
+        ('Arrendatario', 'Arrendatario'),
+    ]
+    tipo = models.CharField(max_length=20, choices=TIPO_CHOICES)
+
+    def __str__(self):
+        return self.tipo
+
+
 class Perfil(models.Model):
     usuario = models.OneToOneField(User, on_delete=models.CASCADE)
-    tipo_usuario = models.ForeignKey('Tipo_usuario', on_delete=models.CASCADE)
+    tipo_usuario = models.ForeignKey(Tipo_usuario, on_delete=models.CASCADE)
     rut = models.CharField(max_length=12)
     direccion = models.CharField(max_length=200)
     telefono = models.CharField(max_length=15)
@@ -73,4 +74,3 @@ class Perfil(models.Model):
 
     def __str__(self):
         return self.usuario.username
-

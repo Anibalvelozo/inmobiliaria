@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+
+{% block contenido %}
+<h1>
+    {{title}}
+</h1>
+<form  method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    {{ form.errors}}
+    <button class="btn btn-primary" type="submit">Registrar Inmueble</button>
+</form>
+
+{% endblock contenido %}
+    
